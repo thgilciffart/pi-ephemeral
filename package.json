@@ -1,0 +1,46 @@
+{
+	"name": "@thgilciffart/pi-ephemeral",
+	"version": "0.1.0",
+	"description": "Ephemeral chats for the pi coding agent: /ephemeral starts a new chat that is never written to disk.",
+	"type": "module",
+	"license": "MIT",
+	"author": "thgilciffart",
+	"keywords": [
+		"pi-package",
+		"pi",
+		"pi-coding-agent",
+		"extension",
+		"ephemeral",
+		"session",
+		"privacy"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/thgilciffart/pi-ephemeral.git"
+	},
+	"homepage": "https://github.com/thgilciffart/pi-ephemeral",
+	"bugs": {
+		"url": "https://github.com/thgilciffart/pi-ephemeral/issues"
+	},
+	"files": [
+		"src",
+		"README.md",
+		"LICENSE"
+	],
+	"pi": {
+		"extensions": [
+			"./src/index.ts"
+		]
+	},
+	"peerDependencies": {
+		"@earendil-works/pi-coding-agent": "*"
+	},
+	"devDependencies": {
+		"@types/node": "^22.0.0",
+		"typescript": "^5.6.0"
+	},
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"test": "bun test"
+	}
+}
