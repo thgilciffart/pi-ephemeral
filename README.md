@@ -47,6 +47,8 @@ pi --extension ./pi-ephemeral/src/index.ts
 
 The verification is why the plugin does not simply delete a session file on exit: an ephemeral chat should never hit the disk at all, including when pi crashes.
 
+If persistence cannot be disabled, the new chat remains saved and the plugin does not send the optional initial prompt. It reports the failure so you can decide how to proceed.
+
 ## Notes
 
 - Ephemeral chats do not appear in `/resume`, and `/session` reports the file as `In-memory`.

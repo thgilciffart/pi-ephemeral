@@ -190,11 +190,12 @@ describe("/ephemeral", () => {
 			getSessionDir: () => "/tmp/pi-sessions",
 		};
 		const harness = createHarness({ nextManager: stubborn });
-		await harness.run();
+		await harness.run("private initial prompt");
 
 		expect(
 			harness.recorded.notifications.some((n) => n.type === "error" && n.message.includes("will be saved")),
 		).toBe(true);
+		expect(harness.recorded.sentMessages).toEqual([]);
 	});
 
 	test("shows the badge on an ephemeral chat and clears it on a saved chat", async () => {

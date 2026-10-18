@@ -106,9 +106,10 @@ export default function ephemeralPlugin(pi: ExtensionAPI): void {
 						newCtx.ui.notify("Ephemeral chat started. Nothing in this chat is saved to disk.", "info");
 					} else {
 						newCtx.ui.notify(
-							"Could not disable session persistence for the new chat. It will be saved.",
+							"Could not disable session persistence for the new chat. It will be saved. No initial prompt was sent.",
 							"error",
 						);
+						return;
 					}
 					if (initialPrompt) {
 						await newCtx.sendUserMessage(initialPrompt, { expandPromptTemplates: true });
