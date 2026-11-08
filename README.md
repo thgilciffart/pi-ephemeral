@@ -1,6 +1,6 @@
 # pi-ephemeral
 
-Start an in-memory chat from a running [Pi](https://pi.dev) session. Pi does not save the new conversation as a session file.
+Ephemeral chats for the [Pi](https://pi.dev) coding agent: `/ephemeral` starts a new chat that is never written to disk.
 
 ## Install
 
